@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TextView</string>
+    <string name="toast_message">Thieu thong tin</string>
+</resources>
