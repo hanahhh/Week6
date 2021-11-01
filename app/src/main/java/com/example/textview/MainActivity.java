@@ -31,13 +31,15 @@ public class MainActivity extends AppCompatActivity {
         CheckBox music = findViewById(R.id.music);
         CheckBox game = findViewById(R.id.game);
 
-        Button submitBTN = findViewById(R.id.submit);
+        Button submit = findViewById(R.id.submit);
 
-        submitBTN.setOnClickListener(new View.OnClickListener() {
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Toast.makeText(MainActivity.this, R.string.toast_message, Toast.LENGTH_SHORT);
+                if(name.getText().toString().length() == 0 || mssv.getText().toString().length() == 0 || birth.getText().toString().length() == 0 || email.getText().toString().length() == 0) {
+                    Toast toast = Toast.makeText(MainActivity.this, R.string.toast_message, Toast.LENGTH_SHORT);
+                    toast.show();
+                }
             }
         });
 
